@@ -45,9 +45,9 @@ def welcome_message_finance(stream, name, version, quote_theme, columns):
     if not quote_theme:
         quote_theme = 'satire'
 
-    stream.write(data.GREEN + data.BOLD)
-    stream.write('$' * columns + '\n')
-    stream.write(data.BOLD + data.GREEN)
+    stream.write(data.BOLD)
+    stream.write(data.GREEN + '$' * columns + '\n')
+    # stream.write(data.BOLD + data.GREEN)
 
     str1 = 'Welcome!'
     if name and version:
@@ -58,23 +58,24 @@ def welcome_message_finance(stream, name, version, quote_theme, columns):
     str5 = datetime.utcnow().strftime('%D %T')
     q, a = quotes.get_quote_and_attribution_tuple(quote_theme)
     str3_base = '"' + q + '"'
-    str3_list = textwrap.wrap(str3_base, columns - 10, break_long_words=False)
+    str3_list = textwrap.wrap(str3_base, columns - 12, break_long_words=False)
     str4 = f'- {a}'
 
-    stream.write('$$$' + ''.center(columns - 6, ' ') + '$$$\n')
-    stream.write('$$$' + data.RED + str1.center(columns - 6, ' ')
-                 + data.GREEN + '$$$\n')
-    stream.write('$$$' + data.RED + str5.center(columns - 6, ' ')
-                 + data.GREEN + '$$$\n')
-    stream.write('$$$' + data.RED + str2.center(columns - 6, ' ')
-                 + data.GREEN + '$$$\n')
-    stream.write('$$$' + ''.center(columns - 6, ' ') + '$$$\n')
+    stream.write(data.GREEN + '$$$$$' + ''.center(columns - 10, ' ') + '$$$$$\n')
+    stream.write('$$$$$' + data.RED + str1.center(columns - 10, ' ')
+                 + data.GREEN + '$$$$$\n')
+    stream.write('$$$$$' + data.RED + str5.center(columns - 10, ' ')
+                 + data.GREEN + '$$$$$\n')
+    stream.write('$$$$$' + data.YELLOW + str2.center(columns - 10, ' ')
+                 + data.GREEN + '$$$$$\n')
+    stream.write('$$$$$' + ''.center(columns - 10, ' ') + '$$$$$\n')
     for str3 in str3_list:
-        stream.write('$$$' + data.WHITE + str3.center(columns - 6, ' ')
-                     + data.GREEN + '$$$\n')
-    stream.write('$$$ ' + data.WHITE + str4.rjust(columns - 15, ' ')
-                 + data.GREEN + '        $$$\n')
-    stream.write('$$$' + ''.center(columns - 6, ' ') + '$$$\n')
+        stream.write('$$$$$ ' + data.WHITE +
+                     str3.center(columns - 12, ' ')
+                     + data.GREEN + ' $$$$$\n')
+    stream.write('$$$$$ ' + data.WHITE + str4.rjust(columns - 19, ' ')
+                 + data.GREEN + '        $$$$$\n')
+    stream.write('$$$$$' + ''.center(columns - 10, ' ') + '$$$$$\n')
     stream.write(data.GREEN)
     stream.write('$' * columns + '\n')
     stream.write(data.RESET)
