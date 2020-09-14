@@ -6,7 +6,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='prologue',
+    name='portent',
     version='0.0.1',
 
     description="Python package providing horrifying "
@@ -20,7 +20,7 @@ setup(
     author_email='sogilvy@tuta.io',
 
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
         'Programming Language :: Python :: 3',
@@ -32,9 +32,8 @@ setup(
     keywords='welcome',
     packages=find_packages(exclude=[]),
     python_requires='>=3.6',
-
     project_urls={
-        'Source': 'https://github.com/hypernormalisation/prologue',
-        'Bug Reports': 'https://github.com/hypernormalisation/timbermafia/prologue',
+        'Source': 'https://github.com/hypernormalisation/portent',
+        'Bug Reports': 'https://github.com/hypernormalisation/timbermafia/portent',
     },
 )

@@ -1,15 +1,9 @@
-__name__ = 'some_application'
+__name__ = 'tradingsolutions'
 __version__ = '1.2.2'
 
-import sys
-import prologue
-import prologue.welcomes
+import portent
 
-# m = prologue.return_module_reference()
-# print(m)
-# print(m.keys())
-# print(m['__name__'])
+portent.welcome(name=__name__, version=__version__, theme='basic')
 
-m = sys.modules[__name__]
-
-prologue.welcomes.welcome_message(module=m)
+# Test it only runs once per session.
+portent.welcome()
