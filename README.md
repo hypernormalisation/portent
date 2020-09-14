@@ -7,7 +7,7 @@ once per session.
 
 ```python
 import portent
-portent.welcome(name='My Application', version='2.3.6')
+portent.welcome(name='My application', version='2.3.6')
 ```
 
 ![](static/img1.png)
@@ -16,5 +16,4 @@ Pass the theme argument to the `welcome` function to use a different
 greeter:
 - basic
 - finance
-
 
