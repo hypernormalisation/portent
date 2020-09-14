@@ -1,5 +1,5 @@
 # portent
-Python package providing horrifying welcome messages for your application
+Python package providing horrifying welcome messages for your application.
 
 Simply place something like the following in your top-level application
 file, and portent will display a helpful, motivational welcome message
