@@ -81,8 +81,10 @@ brass_eye_quotes = {
     "Driving a car with bikes on the roof is not a sportsmanlike way to "
     "compete in the Tour de France.": "Alan Partridge",
 
+    "It's bigger than that Chris, it's large.": "Spartacus Mills",
+
     "They’ll quite simply say John Major punched the Queen, everything else "
-    "will be a footnote": "Spartacus Mills",
+    "will be a footnote.": "Spartacus Mills",
 
     "You're wrong, and you're a grotesquely ugly freak.": "Chris Morris",
 
